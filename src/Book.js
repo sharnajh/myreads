@@ -5,14 +5,14 @@ class Book extends Component {
     render() {
         const { book } = this.props
         return(
-            <li>
+            <div>
                 {book.title}
                 <ChangeShelfButton
                     book={book}
                     onMove={this.props.onMove}
                     shelves={this.props.shelves}
                 />
-            </li>
+            </div>
         )
     }
 }

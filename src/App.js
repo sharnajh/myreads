@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import Shelves from './Shelves';
 import * as BooksAPI from './BooksAPI';
+import { Route } from 'react-router-dom';
+import SearchPage from './SearchPage';
 
 class App extends Component {
     state = {
       books: [],
+      shelves: [
+        { value: "currentlyReading", title: "Currently Reading" },
+        { value: "wantToRead", title: "Want to Read" },
+        { value: "read", title: "Read" }
+    ]
     }
 
     componentDidMount() {
@@ -26,10 +33,22 @@ class App extends Component {
     return (
       <div>
         <h1>MyReads</h1>
-          <Shelves 
+          <form action="/search">
+            <button type="submit">Search</button>
+          </form>
+          <Route exact path='/' render={() => (
+            <Shelves 
             books={this.state.books}
-            onMove={this.handleMove}  
-          />
+            onMove={this.handleMove}
+            shelves={this.state.shelves}  
+            />
+          )} />
+          <Route path='/search' render={() => (
+            <SearchPage 
+            shelves={this.state.shelves}
+            onMove={this.handleMove}
+            />
+          )} />
       </div>
     )
   }
