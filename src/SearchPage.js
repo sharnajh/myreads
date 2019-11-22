@@ -39,17 +39,26 @@ class SearchPage extends Component {
                 placeholder="Search for books"
                 onChange={(e) => this.updateQuery(e.target.value)}
             />
-            
-                {results.map((book, id) => (
     
+                <div id="shelves">
+                <div className="shelf">
+                <div className="shelf-books">
+                {results.map((book, id) => (
+                <div className="book">
                         <Book 
                             key={id}
                             book={book}
                             shelves={shelves}
                             onMove={this.props.onMove}
                         />
-                    
+                </div> 
                 ))}
+                </div>
+                </div>
+                </div>
+               
+                
+                
             
             {catchError && (
                 <h3>Your search - "{query}" - did not match any books.</h3>

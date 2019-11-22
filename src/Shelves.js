@@ -6,7 +6,7 @@ class Shelves extends Component {
     render() {
         const { books, shelves } = this.props
         return (
-            <div>
+            <div id="shelves">
                 
             {shelves.map((shelf, id) => {
                 const booksByShelf = books.filter((b) => b.shelf === shelf.value)

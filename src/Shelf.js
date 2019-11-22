@@ -6,8 +6,9 @@ class Shelf extends Component {
     render() {
         const { books, shelf } = this.props
         return(
-            <div>
+            <div className="shelf">
                 <ShelfTitle shelf={shelf} />
+                <div className="shelf-books">
                     
                         {books.map((b, id) => (
                             <Book 
@@ -17,7 +18,7 @@ class Shelf extends Component {
                                 shelves={this.props.shelves}
                             />
                         ))} 
-                    
+                </div>
             </div>
         )
     }

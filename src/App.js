@@ -3,6 +3,7 @@ import Shelves from './Shelves';
 import * as BooksAPI from './BooksAPI';
 import { Route } from 'react-router-dom';
 import SearchPage from './SearchPage';
+import './css/app.css';
 
 class App extends Component {
     state = {
@@ -31,17 +32,25 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>MyReads</h1>
-          <form action="/search">
-            <button type="submit">Search</button>
-          </form>
-          <Route exact path='/' render={() => (
+      <div id="maincontainer">
+        <a href="/">
+          <h1>MyReads</h1>
+        </a>
+          <Route exact path='/' render={(props) => (
+            <div>
             <Shelves 
             books={this.state.books}
             onMove={this.handleMove}
             shelves={this.state.shelves}  
             />
+            <form action="/search">
+            <button 
+              id="search-btn"
+              type="submit">
+                +
+            </button>
+          </form>
+            </div>
           )} />
           <Route path='/search' render={() => (
             <SearchPage 
@@ -49,6 +58,7 @@ class App extends Component {
             onMove={this.handleMove}
             />
           )} />
+        <h5>Coded with ♡</h5>
       </div>
     )
   }

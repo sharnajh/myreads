@@ -4,6 +4,7 @@ import serializeForm from 'form-serialize';
 class ChangeShelfButton extends Component {
     moveShelf = (e) => {
         e.preventDefault()
+        this.setState({ bookToMove: { book: this.props.book, shelf: e.value}})
         const values = serializeForm(e.target, { hash: true })
         values.book = this.props.book
         this.props.onMove(values)
@@ -16,6 +17,7 @@ class ChangeShelfButton extends Component {
                     {shelves.map((shelf,id) => (
                         <option 
                             key={id}
+                            className="dropdown"
                             value={shelf.value}
                             selected={book.shelf === shelf.value ? true : false}
                         >{shelf.title}</option>

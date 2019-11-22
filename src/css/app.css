@@ -1,0 +1,91 @@
+body {
+  background: white;
+}
+
+body #maincontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #maincontainer #search-btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  font-size: 70px;
+  color: white;
+  line-height: 0px;
+  padding: 0px;
+  padding-bottom: 10px;
+  margin: 0px;
+  text-align: center;
+  border: 0px;
+  background: -webkit-gradient(linear, left top, right top, from(#b149ff), to(#00ffff));
+  background: linear-gradient(to right, #b149ff 0%, #00ffff 100%);
+  position: fixed;
+  margin: 50px;
+  bottom: 0;
+  right: 0;
+}
+
+body #maincontainer #shelves .shelf {
+  padding: 20px;
+  margin: 20px;
+}
+
+body #maincontainer #shelves .shelf h2 {
+  text-align: center;
+}
+
+body #maincontainer #shelves .shelf .shelf-books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book {
+  width: 150px;
+  height: 300px;
+  margin: 20px;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book h5, body #maincontainer #shelves .shelf .shelf-books .book h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book h6 {
+  color: gray;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book img {
+  width: 150px;
+  height: 220px;
+  padding: 0;
+  margin: 0;
+  -webkit-box-shadow: 10px black;
+          box-shadow: 10px black;
+}
+/*# sourceMappingURL=app.css.map */
