@@ -8,7 +8,7 @@ class Shelf extends Component {
         return(
             <div>
                 <ShelfTitle shelf={shelf} />
-                    <ul>
+                    
                         {books.map((b, id) => (
                             <Book 
                                 key={id} 
@@ -17,7 +17,7 @@ class Shelf extends Component {
                                 shelves={this.props.shelves}
                             />
                         ))} 
-                    </ul>
+                    
             </div>
         )
     }
