@@ -10,7 +10,12 @@ class Shelf extends Component {
                 <ShelfTitle shelf={shelf} />
                     <ul>
                         {books.map((b, id) => (
-                            <Book key={id} book={b} onMove={this.props.onMove} />
+                            <Book 
+                                key={id} 
+                                book={b} 
+                                onMove={this.props.onMove}
+                                shelves={this.props.shelves}
+                            />
                         ))} 
                     </ul>
             </div>
