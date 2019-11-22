@@ -1,0 +1,41 @@
+body {
+    background: white;
+    #maincontainer {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        #shelves {
+            .shelf {
+                border-bottom:1px black solid;
+                padding:20px;
+                margin:20px;
+                h2 {
+                    text-align:center;
+                }
+                .shelf-books {
+                    display:flex;
+                    flex-flow: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    align-items:center;
+                    .book {
+                        width:150px;
+                        height:300px;
+                        margin:20px;
+                        h5, h6 {
+                            padding:0px;
+                            margin:0px;
+                        }
+                        img {
+                            width:150px;
+                            height:220px;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

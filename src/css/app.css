@@ -1,0 +1,66 @@
+body {
+  background: white;
+}
+
+body #maincontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #maincontainer #shelves .shelf {
+  border-bottom: 1px black solid;
+  padding: 20px;
+  margin: 20px;
+}
+
+body #maincontainer #shelves .shelf h2 {
+  text-align: center;
+}
+
+body #maincontainer #shelves .shelf .shelf-books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book {
+  width: 150px;
+  height: 300px;
+  margin: 20px;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book h5, body #maincontainer #shelves .shelf .shelf-books .book h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book img {
+  width: 150px;
+  height: 220px;
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=app.css.map */

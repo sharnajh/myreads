@@ -4,12 +4,11 @@ import ChangeShelfButton from './ChangeShelfButton'
 class Book extends Component {
     render() {
         const { book } = this.props
-        console.log(book)
         return(
-            <div>
+            <div className="book">
                 <img src={book.imageLinks.thumbnail} alt={book.title} />
-                <h4>{book.title}</h4>
-                <h5>By {book.authors.join(', ')}</h5>
+                <h5>{book.title}</h5>
+                <h6>{book.authors ? book.authors.join(', ') : ""}</h6>
                 <ChangeShelfButton
                     book={book}
                     onMove={this.props.onMove}

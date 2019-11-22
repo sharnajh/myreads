@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import serializeForm from 'form-serialize';
 
 class ChangeShelfButton extends Component {
-    state = {
-        bookToMove: {
-            book: {},
-            shelf: ""
-        }
-    }
     moveShelf = (e) => {
         e.preventDefault()
         this.setState({ bookToMove: { book: this.props.book, shelf: e.value}})
@@ -23,7 +17,7 @@ class ChangeShelfButton extends Component {
                     {shelves.map((shelf,id) => (
                         <option 
                             key={id}
-                            value={book.shelf}
+                            value={shelf.value}
                             selected={book.shelf === shelf.value ? true : false}
                         >{shelf.title}</option>
                     ))}

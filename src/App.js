@@ -3,6 +3,7 @@ import Shelves from './Shelves';
 import * as BooksAPI from './BooksAPI';
 import { Route } from 'react-router-dom';
 import SearchPage from './SearchPage';
+import './css/app.css';
 
 class App extends Component {
     state = {
@@ -31,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="maincontainer">
         <a href="/">
           <h1>MyReads</h1>
         </a>
