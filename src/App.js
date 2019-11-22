@@ -36,15 +36,21 @@ class App extends Component {
         <a href="/">
           <h1>MyReads</h1>
         </a>
-          <form action="/search">
-            <button type="submit">Search</button>
-          </form>
-          <Route exact path='/' render={() => (
+          <Route exact path='/' render={(props) => (
+            <div>
             <Shelves 
             books={this.state.books}
             onMove={this.handleMove}
             shelves={this.state.shelves}  
             />
+            <form action="/search">
+            <button 
+              id="search-btn"
+              type="submit">
+                +
+            </button>
+          </form>
+            </div>
           )} />
           <Route path='/search' render={() => (
             <SearchPage 

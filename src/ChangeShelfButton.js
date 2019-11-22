@@ -17,6 +17,7 @@ class ChangeShelfButton extends Component {
                     {shelves.map((shelf,id) => (
                         <option 
                             key={id}
+                            className="dropdown"
                             value={shelf.value}
                             selected={book.shelf === shelf.value ? true : false}
                         >{shelf.title}</option>

@@ -5,9 +5,27 @@ body {
         flex-flow: column;
         justify-content: center;
         align-items: center;
+        #search-btn {
+            width:100px;
+            height:100px;
+            border-radius:100%;
+            font-size:70px;
+            color:white;
+            line-height:0px;
+            padding:0px;
+            padding-bottom: 10px;
+            margin:0px;
+            text-align: center;
+            border:0px;
+            background: linear-gradient(to right, #b149ff 0%, #00ffff 100%);
+            
+            position:fixed;
+            margin:50px;
+            bottom:0;
+            right:0;
+        }
         #shelves {
             .shelf {
-                border-bottom:1px black solid;
                 padding:20px;
                 margin:20px;
                 h2 {
@@ -19,6 +37,7 @@ body {
                     flex-wrap: wrap;
                     justify-content: space-evenly;
                     align-items:center;
+                    
                     .book {
                         width:150px;
                         height:300px;
@@ -26,16 +45,20 @@ body {
                         h5, h6 {
                             padding:0px;
                             margin:0px;
+                        } h6 {
+                            color:gray;
                         }
                         img {
                             width:150px;
                             height:220px;
                             padding: 0;
                             margin: 0;
+                            box-shadow: 10px black;
+                        }
+                        
                         }
                     }
                 }
             }
         }
     }
-}
