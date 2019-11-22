@@ -32,7 +32,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>MyReads</h1>
+        <a href="/">
+          <h1>MyReads</h1>
+        </a>
           <form action="/search">
             <button type="submit">Search</button>
           </form>
@@ -49,6 +51,7 @@ class App extends Component {
             onMove={this.handleMove}
             />
           )} />
+        <h5>Coded with ♡</h5>
       </div>
     )
   }
