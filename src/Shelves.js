@@ -1,39 +1,32 @@
 import React, { Component } from 'react';
 import Shelf from './Shelf';
-import * as BooksAPI from './BooksAPI';
 
 class Shelves extends Component {
     state = {
-        shelves: {
-            currentlyReading: [],
-            wantToRead: [],
-            read: []
-        }
-    }
-
-    handleMove = (values) => {
-        BooksAPI.update(values.book, values.shelf)
-          .then((res) => (
-            console.log(res),
-            this.setState((prev) => ({
-                shelves: res
-            }))
-          ))
-      }
+        shelves: [
+            { value: "currentlyReading", title: 'Currently Reading' },
+            { value: "wantToRead", title: "Want to Read" },
+            { value: "read", title: "Read" }
+        ]
+     }
     
     render() {
         const { books } = this.props
         const { shelves } = this.state
         return (
             <div>
-            {Object.keys(shelves).map((shelf, id) => (
-                <Shelf 
-                    key={id} 
-                    books={books} 
-                    bookshelf={shelf} 
-                    onMove={this.handleMove} 
-                />
-              ))}
+            {shelves.map((shelf, id) => {
+                const booksByShelf = books.filter((b) => b.shelf === shelf.value)
+                return (
+                    <Shelf
+                        key={id}
+                        shelf={shelf}
+                        books={booksByShelf}
+                        onMove={this.props.onMove}
+                    />
+                )
+            })}
+        
             </div>
         )
     }

@@ -4,12 +4,12 @@ import Book from './Book'
 
 class Shelf extends Component {
     render() {
-        const { books, bookshelf } = this.props
+        const { books, shelf } = this.props
         return(
             <div>
-                <ShelfTitle bookshelf={bookshelf} />
+                <ShelfTitle shelf={shelf} />
                     <ul>
-                        {books.filter((book) => book.shelf === bookshelf).map((b, id) => (
+                        {books.map((b, id) => (
                             <Book key={id} book={b} onMove={this.props.onMove} />
                         ))} 
                     </ul>
