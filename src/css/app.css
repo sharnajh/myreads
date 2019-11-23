@@ -21,8 +21,27 @@ body #maincontainer {
           align-items: center;
 }
 
-body #maincontainer #search-bar {
-  width: 800px;
+body #maincontainer #search-pg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body #maincontainer #search-pg #search-bar {
+  width: 80%;
   height: 50px;
   margin: 10px;
   border-radius: 50px;
@@ -38,11 +57,11 @@ body #maincontainer #header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
-  margin: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -54,10 +73,19 @@ body #maincontainer #header a:link, body #maincontainer #header a:visited, body 
   color: white;
 }
 
+body #maincontainer #header #back, body #maincontainer #header #add-shelf-btn {
+  width: 40px;
+  margin: 15px;
+}
+
 body #maincontainer #header h1 {
   font-size: 40px;
-  padding: 0px;
-  margin: 0px;
+  margin: 0px !important;
+  padding: 15px;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 body #maincontainer #search-btn {
@@ -78,12 +106,11 @@ body #maincontainer #search-btn {
   margin: 50px;
   bottom: 0;
   right: 0;
+  cursor: pointer;
 }
 
 body #maincontainer #shelves .shelf {
-  padding: 20px;
   margin: 20px;
-  max-width: 800px;
 }
 
 body #maincontainer #shelves .shelf hr {
@@ -118,13 +145,13 @@ body #maincontainer #shelves .shelf .shelf-books {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px;
 }
 
 body #maincontainer #shelves .shelf .shelf-books .book {
   width: 150px;
   height: 300px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -145,6 +172,8 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont {
   position: relative;
   width: 160px;
   height: 230px;
+  padding: 0;
+  margin: 0;
 }
 
 body #maincontainer #shelves .shelf .shelf-books .book .imgcont img {
@@ -152,11 +181,13 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont img {
   height: 220px;
   padding: 0;
   margin: 0;
+  -webkit-box-shadow: 0 10px 6px -6px #9c9c9c;
+          box-shadow: 0 10px 6px -6px #9c9c9c;
 }
 
 body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -165,8 +196,9 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn 
   color: white;
   padding: 0px;
   border: 0px;
-  background-image: url("../menuicon.png");
+  background-image: url("../drop-down-arrow.svg");
   background-repeat: no-repeat;
+  background-size: 20px;
   background-position: center;
   background-color: #57caff;
 }
@@ -174,7 +206,7 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn 
 body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn select {
   cursor: pointer;
   height: 100%;
-  opacity: 0;
   width: 100%;
+  opacity: 0;
 }
 /*# sourceMappingURL=app.css.map */

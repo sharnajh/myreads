@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as BooksAPI from './BooksAPI.js';
-import Book from './Book'
+import Book from './Book';
 
 class SearchPage extends Component {
     state = {
@@ -37,10 +37,12 @@ class SearchPage extends Component {
                 placeholder="Search for books"
                 onChange={(e) => this.updateQuery(e.target.value)}
             />
-    
-                
+                <div id="shelves">
+                <div className="shelf">
+                <div className="shelf-books">
                 {results.map((book, id) => (
-                <div className="book">
+                
+                <div className="imgcont">
                         <Book 
                             key={id}
                             book={book}
@@ -48,14 +50,18 @@ class SearchPage extends Component {
                             onMove={this.props.onMove}
                         />
                 </div> 
+                
                 ))}
+                </div>
+                </div>
+                </div>
                 
                
                 
                 
             
             {catchError && (
-                <h3>Your search - "{query}" - did not match any books.</h3>
+                <h3>Your search - "{query}" - did not match with any books.</h3>
             )}
             </div>
         )

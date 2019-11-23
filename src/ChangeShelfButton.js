@@ -13,7 +13,7 @@ class ChangeShelfButton extends Component {
                             onChange={this.moveShelf} 
                             name="shelf"
                         >
-                        <option value="none" disabled>
+                        <option value="none">
                             Move to...
                         </option>
                         {shelves.map((shelf,id) => (
@@ -21,7 +21,7 @@ class ChangeShelfButton extends Component {
                                 key={id}
                                 className="dropdown"
                                 value={shelf.value}
-                                selected={book.shelf === shelf.value ? true : false}
+                                selected={book.shelf ? (book.shelf === shelf.value ? true : false) : false}
                             >{shelf.title}</option>
                         ))}
                         </select>

@@ -4,6 +4,7 @@ import * as BooksAPI from './BooksAPI';
 import { Route } from 'react-router-dom';
 import SearchPage from './SearchPage';
 import './css/app.css';
+import Back from './left.svg'
 
 class App extends Component {
     state = {
@@ -34,16 +35,19 @@ class App extends Component {
     return (
       <div id="maincontainer">
         <div id="header">
-        <a href="/">
-          <h1>MyReads</h1>
-        </a>
+        <Route path='/search' render={() => (<a href="/"><img id="back" src={Back} /></a>)} />
+        <Route exact path='/' render={() => (<div id="add-shelf-btn"></div>)} />
+          <a href="/">
+            <h1>MyReads</h1>
+          </a>
+        <div id="add-shelf-btn"></div>
         </div>
           <Route exact path='/' render={(props) => (
             <div>
             <Shelves 
-            books={this.state.books}
-            onMove={this.handleMove}
-            shelves={this.state.shelves}  
+              books={this.state.books}
+              onMove={this.handleMove}
+              shelves={this.state.shelves}  
             />
             <form action="/search">
             <button 
