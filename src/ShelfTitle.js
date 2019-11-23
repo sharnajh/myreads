@@ -4,7 +4,10 @@ class ShelfTitle extends Component {
     render() {
         const { shelf } = this.props
         return(
-            <h2>{shelf.title}</h2>
+            <div>
+            <h2 className="shelf-title">{shelf.title}</h2>
+            <hr />
+            </div>
         )
     }
 }

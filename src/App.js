@@ -4,6 +4,7 @@ import * as BooksAPI from './BooksAPI';
 import { Route } from 'react-router-dom';
 import SearchPage from './SearchPage';
 import './css/app.css';
+import Back from './left.svg'
 
 class App extends Component {
     state = {
@@ -19,13 +20,13 @@ class App extends Component {
       BooksAPI.getAll().then(books => this.setState({ books }));
     }
 
-    handleMove = (values) => {
-      BooksAPI.update(values.book, values.shelf).then(response => {
-        values.book.shelf = values.shelf;
+    handleMove = (book,shelf) => {
+      BooksAPI.update(book, shelf).then(response => {
+        book.shelf = shelf;
         this.setState(prevState => ({
           books: prevState.books
-            .filter(book => book.id !== values.book.id)
-            .concat(values.book)
+            .filter(b => b.id !== book.id)
+            .concat(book)
         }));
       });
     };
@@ -33,15 +34,20 @@ class App extends Component {
   render() {
     return (
       <div id="maincontainer">
-        <a href="/">
-          <h1>MyReads</h1>
-        </a>
+        <div id="header">
+        <Route path='/search' render={() => (<a href="/"><img id="back" src={Back} /></a>)} />
+        <Route exact path='/' render={() => (<div id="add-shelf-btn"></div>)} />
+          <a href="/">
+            <h1>MyReads</h1>
+          </a>
+        <div id="add-shelf-btn"></div>
+        </div>
           <Route exact path='/' render={(props) => (
             <div>
             <Shelves 
-            books={this.state.books}
-            onMove={this.handleMove}
-            shelves={this.state.shelves}  
+              books={this.state.books}
+              onMove={this.handleMove}
+              shelves={this.state.shelves}  
             />
             <form action="/search">
             <button 
@@ -58,7 +64,6 @@ class App extends Component {
             onMove={this.handleMove}
             />
           )} />
-        <h5>Coded with ♡</h5>
       </div>
     )
   }
