@@ -122,6 +122,10 @@ body #maincontainer #search-btn {
   cursor: pointer;
 }
 
+body #maincontainer #search-btn:focus {
+  outline: none !important;
+}
+
 body #maincontainer #shelves .shelf {
   margin: 20px;
 }
@@ -209,7 +213,7 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn 
   color: white;
   padding: 0px;
   border: 0px;
-  background-image: url("../drop-down-arrow.svg");
+  background-image: url("../images/drop-down-arrow.svg");
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;

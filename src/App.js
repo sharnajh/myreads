@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Shelves from './Shelves';
 import * as BooksAPI from './BooksAPI';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import SearchPage from './SearchPage';
 import './css/app.css';
-import Back from './left.svg'
+import Back from './images/left.svg'
 
 class App extends Component {
     state = {
@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div id="maincontainer">
         <div id="header">
-        <Route path='/search' render={() => (<a href="/"><img id="back" src={Back} alt="back" /></a>)} />
+        <Route path='/search' render={() => (<Link to="/"><img id="back" src={Back} alt="back" /></Link>)} />
         <Route exact path='/' render={() => (<div id="empty"></div>)} />
           <a href="/">
             <h1>MyReads</h1>
