@@ -4,7 +4,7 @@ import * as BooksAPI from './BooksAPI';
 import { Route, Link } from 'react-router-dom';
 import SearchPage from './SearchPage';
 import './css/app.css';
-import Back from './images/left.svg'
+import Back from './icons/left.svg'
 
 class App extends Component {
     state = {
