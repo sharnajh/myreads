@@ -13,17 +13,19 @@ class ChangeShelfButton extends Component {
                             onChange={this.moveShelf} 
                             name="shelf"
                         >
-                        <option value="none">
+                        <option value="none" disabled={book.shelf ? true : false}>
                             Move to...
                         </option>
                         {shelves.map((shelf,id) => (
                             <option 
                                 key={id}
-                                className="dropdown"
                                 value={shelf.value}
                                 selected={book.shelf ? (book.shelf === shelf.value ? true : false) : false}
                             >{shelf.title}</option>
                         ))}
+                        {book.shelf ? (
+                            <option value=" ">Remove from shelf</option>
+                         ) : ""}
                         </select>
                     </div>
         )

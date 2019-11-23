@@ -36,11 +36,11 @@ class App extends Component {
       <div id="maincontainer">
         <div id="header">
         <Route path='/search' render={() => (<a href="/"><img id="back" src={Back} /></a>)} />
-        <Route exact path='/' render={() => (<div id="add-shelf-btn"></div>)} />
+        <Route exact path='/' render={() => (<div id="empty"></div>)} />
           <a href="/">
             <h1>MyReads</h1>
           </a>
-        <div id="add-shelf-btn"></div>
+        <div id="empty"></div>
         </div>
           <Route exact path='/' render={(props) => (
             <div>
