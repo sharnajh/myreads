@@ -2,6 +2,7 @@ body {
   background: white;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body a:link, body a:visited, body a:hover, body a:hover {
@@ -49,6 +50,10 @@ body #maincontainer #search-pg #search-bar {
   font-size: 30px;
   color: #5c5c5c;
   text-indent: 20px;
+}
+
+body #maincontainer #search-pg #search-bar:focus {
+  outline: none !important;
 }
 
 body #maincontainer #header {

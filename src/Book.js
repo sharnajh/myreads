@@ -4,12 +4,13 @@ import BlankCover from './no_cover_available.png';
 
 class Book extends Component {
     render() {
-        const { book } = this.props
+        const { book, books } = this.props
         return(
             <div className="book">
                 <div className="imgcont">
                     <ChangeShelfButton
                             book={book}
+                            books={books}
                             onMove={this.props.onMove}
                             shelves={this.props.shelves}
                         />
