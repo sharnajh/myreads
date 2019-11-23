@@ -37,15 +37,22 @@ body {
             display:flex;
             margin:0 !important;
             padding:0 !important;
+            overflow:hidden;
             justify-content: space-between;
             align-items:center;
             background: linear-gradient(to right, #b149ff 0%, #00ffff 100%);
             a:link, a:visited, a:active {
                 color:white;
             }
-            #back, #add-shelf-btn {
+            #back {
                 width:40px;
-                margin:15px;
+                padding:0;
+                margin-left:10px;
+            } 
+            #empty {
+                width:40px;
+                padding:0;
+                margin-right:10px;
             }
             h1 {
                 font-size:40px;
@@ -145,6 +152,7 @@ body {
                                         height:100%;
                                         width:100%;
                                         opacity:0;
+                                        font-size: 15px;
                                     }
                                 }
                             }

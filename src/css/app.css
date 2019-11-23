@@ -59,6 +59,7 @@ body #maincontainer #header {
   display: flex;
   margin: 0 !important;
   padding: 0 !important;
+  overflow: hidden;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -73,9 +74,16 @@ body #maincontainer #header a:link, body #maincontainer #header a:visited, body 
   color: white;
 }
 
-body #maincontainer #header #back, body #maincontainer #header #add-shelf-btn {
+body #maincontainer #header #back {
   width: 40px;
-  margin: 15px;
+  padding: 0;
+  margin-left: 10px;
+}
+
+body #maincontainer #header #empty {
+  width: 40px;
+  padding: 0;
+  margin-right: 10px;
 }
 
 body #maincontainer #header h1 {
@@ -208,5 +216,6 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn 
   height: 100%;
   width: 100%;
   opacity: 0;
+  font-size: 15px;
 }
 /*# sourceMappingURL=app.css.map */
