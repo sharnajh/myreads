@@ -33,9 +33,11 @@ class App extends Component {
   render() {
     return (
       <div id="maincontainer">
+        <div id="header">
         <a href="/">
           <h1>MyReads</h1>
         </a>
+        </div>
           <Route exact path='/' render={(props) => (
             <div>
             <Shelves 

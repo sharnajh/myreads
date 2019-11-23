@@ -1,5 +1,11 @@
 body {
   background: white;
+  margin: 0;
+  padding: 0;
+}
+
+body a:link, body a:visited, body a:hover, body a:hover {
+  text-decoration: none;
 }
 
 body #maincontainer {
@@ -18,6 +24,45 @@ body #maincontainer {
           align-items: center;
 }
 
+body #maincontainer #search-bar {
+  width: 800px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50px;
+  border: 1px #c2c2c2 solid;
+  font-size: 30px;
+  color: #5c5c5c;
+  text-indent: 20px;
+}
+
+body #maincontainer #header {
+  color: white;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#b149ff), to(#00ffff));
+  background: linear-gradient(to right, #b149ff 0%, #00ffff 100%);
+}
+
+body #maincontainer #header a:link, body #maincontainer #header a:visited, body #maincontainer #header a:active {
+  color: white;
+}
+
+body #maincontainer #header h1 {
+  font-size: 40px;
+  padding: 0px;
+  margin: 0px;
+}
+
 body #maincontainer #search-btn {
   width: 100px;
   height: 100px;
@@ -27,7 +72,6 @@ body #maincontainer #search-btn {
   line-height: 0px;
   padding: 0px;
   padding-bottom: 10px;
-  margin: 0px;
   text-align: center;
   border: 0px;
   background: -webkit-gradient(linear, left top, right top, from(#b149ff), to(#00ffff));
@@ -41,10 +85,22 @@ body #maincontainer #search-btn {
 body #maincontainer #shelves .shelf {
   padding: 20px;
   margin: 20px;
+  max-width: 800px;
 }
 
-body #maincontainer #shelves .shelf h2 {
+body #maincontainer #shelves .shelf hr {
+  max-width: 20%;
+  border: 0.5px lightgray solid;
+  margin-top: 20px;
+}
+
+body #maincontainer #shelves .shelf .shelf-title {
   text-align: center;
+  font-size: 30px;
+  position: relative;
+  color: #5c5c5c;
+  margin: 0;
+  padding: 0;
 }
 
 body #maincontainer #shelves .shelf .shelf-books {
@@ -68,7 +124,8 @@ body #maincontainer #shelves .shelf .shelf-books {
 body #maincontainer #shelves .shelf .shelf-books .book {
   width: 150px;
   height: 300px;
-  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 body #maincontainer #shelves .shelf .shelf-books .book h5, body #maincontainer #shelves .shelf .shelf-books .book h6 {
@@ -77,7 +134,11 @@ body #maincontainer #shelves .shelf .shelf-books .book h5, body #maincontainer #
 }
 
 body #maincontainer #shelves .shelf .shelf-books .book h6 {
-  color: gray;
+  color: #8b8b8b;
+}
+
+body #maincontainer #shelves .shelf .shelf-books .book h5 {
+  color: #5c5c5c;
 }
 
 body #maincontainer #shelves .shelf .shelf-books .book img {

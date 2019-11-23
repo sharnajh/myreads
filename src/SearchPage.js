@@ -30,17 +30,15 @@ class SearchPage extends Component {
         const { shelves } = this.props
         return(
             <div>
-            <form action="/">
-                <button type="submit">Back</button>
-            </form>
             <input
+                id="search-bar"
                 type="text"
                 value={query}
                 placeholder="Search for books"
                 onChange={(e) => this.updateQuery(e.target.value)}
             />
     
-                <div id="shelves">
+                
                 <div className="shelf">
                 <div className="shelf-books">
                 {results.map((book, id) => (
@@ -55,7 +53,7 @@ class SearchPage extends Component {
                 ))}
                 </div>
                 </div>
-                </div>
+                
                
                 
                 
