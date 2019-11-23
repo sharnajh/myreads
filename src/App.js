@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div id="maincontainer">
         <div id="header">
-        <Route path='/search' render={() => (<a href="/"><img id="back" src={Back} /></a>)} />
+        <Route path='/search' render={() => (<a href="/"><img id="back" src={Back} alt="back" /></a>)} />
         <Route exact path='/' render={() => (<div id="empty"></div>)} />
           <a href="/">
             <h1>MyReads</h1>

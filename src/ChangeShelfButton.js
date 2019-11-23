@@ -5,13 +5,25 @@ class ChangeShelfButton extends Component {
         e.preventDefault()
         this.props.onMove(this.props.book, e.target.value)
     }
+
     render() {
-        const { book, shelves } = this.props
+        const { book, books, shelves } = this.props
+        let defaultShelf = 'none';
+
+        if (books) {
+            for (let b of books) {
+                if (b.id === book.id) {
+                defaultShelf = b.shelf;
+                break;
+                }
+            }
+        }
         return (
                     <div className="shelf-menu-btn">
                         <select
                             onChange={this.moveShelf} 
                             name="shelf"
+                            defaultValue={defaultShelf}
                         >
                         <option value="none" disabled={book.shelf ? true : false}>
                             Move to...
@@ -20,12 +32,8 @@ class ChangeShelfButton extends Component {
                             <option 
                                 key={id}
                                 value={shelf.value}
-                                selected={book.shelf ? (book.shelf === shelf.value ? true : false) : false}
                             >{shelf.title}</option>
                         ))}
-                        {book.shelf ? (
-                            <option value=" " selected={false}>Remove from shelf</option>
-                         ) : ""}
                         </select>
                     </div>
         )

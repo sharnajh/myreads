@@ -42,7 +42,7 @@ class SearchPage extends Component {
                 <div className="shelf-books">
                 {results.map((book, id) => (
                 
-                <div className="imgcont">
+                <div key={id} className="imgcont">
                         <Book 
                             key={id}
                             book={book}

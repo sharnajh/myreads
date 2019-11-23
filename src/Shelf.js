@@ -14,6 +14,7 @@ class Shelf extends Component {
                             <Book 
                                 key={id} 
                                 book={b} 
+                                books={books}
                                 onMove={this.props.onMove}
                                 shelves={this.props.shelves}
                             />
