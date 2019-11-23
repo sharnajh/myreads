@@ -5,6 +5,7 @@ body {
     background: white;
     margin:0;
     padding:0;
+    -webkit-tap-highlight-color: transparent;
     a:link, a:visited, a:hover, a:hover {
         text-decoration:none;
     }
@@ -29,6 +30,9 @@ body {
                     font-size: 30px;
                     color: $charcoal;
                     text-indent: 20px;
+                    &:focus {
+                        outline: none !important;
+                    }
                 }
             }
         #header {

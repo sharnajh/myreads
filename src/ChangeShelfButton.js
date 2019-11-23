@@ -24,7 +24,7 @@ class ChangeShelfButton extends Component {
                             >{shelf.title}</option>
                         ))}
                         {book.shelf ? (
-                            <option value=" ">Remove from shelf</option>
+                            <option value=" " selected={false}>Remove from shelf</option>
                          ) : ""}
                         </select>
                     </div>
