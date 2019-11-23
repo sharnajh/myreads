@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ChangeShelfButton from './ChangeShelfButton';
-import BlankCover from './images/no_cover_available.png';
+import BlankCover from './no_cover_available.png';
 
 class Book extends Component {
     render() {
