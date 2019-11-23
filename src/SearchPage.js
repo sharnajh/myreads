@@ -29,7 +29,7 @@ class SearchPage extends Component {
         const { query, results, catchError } = this.state
         const { shelves } = this.props
         return(
-            <div>
+            <div id="search-pg">
             <input
                 id="search-bar"
                 type="text"
@@ -39,8 +39,6 @@ class SearchPage extends Component {
             />
     
                 
-                <div className="shelf">
-                <div className="shelf-books">
                 {results.map((book, id) => (
                 <div className="book">
                         <Book 
@@ -51,8 +49,6 @@ class SearchPage extends Component {
                         />
                 </div> 
                 ))}
-                </div>
-                </div>
                 
                
                 

@@ -11,18 +11,17 @@ body {
     #maincontainer {
         display: flex;
         flex-flow: column;
-        justify-content: center;
         align-items: center;
-        #search-bar {
-            width:800px;
-            height:50px;
-            margin:10px;
-            border-radius:50px;
-            border: 1px rgb(194, 194, 194) solid;
-            font-size: 30px;
-            color: $charcoal;
-            text-indent: 20px;
-        }
+            #search-bar {
+                width:800px;
+                height:50px;
+                margin:10px;
+                border-radius:50px;
+                border: 1px rgb(194, 194, 194) solid;
+                font-size: 30px;
+                color: $charcoal;
+                text-indent: 20px;
+            }
         #header {
             color:white;
             width:100vw;
@@ -50,6 +49,7 @@ body {
             line-height:0px;
             padding:0px;
             padding-bottom: 10px;
+            z-index:1000;
             text-align: center;
             border:0px;
             background: linear-gradient(to right, #b149ff 0%, #00ffff 100%);
@@ -67,6 +67,7 @@ body {
                     max-width: 20%;
                     border: 0.5px lightgray solid;
                     margin-top: 20px;
+                    margin-bottom:20px;
                 }
                 .shelf-title {
                     text-align:center;
@@ -87,6 +88,7 @@ body {
                         height:300px;
                         margin-top:10px;
                         margin-bottom:10px;
+                        padding:10px;
                         h5, h6 {
                             padding:0px;
                             margin:0px;
@@ -95,14 +97,39 @@ body {
                         } h5 {
                             color:$charcoal;
                         }
-                        img {
-                            width:150px;
-                            height:220px;
-                            padding: 0;
-                            margin: 0;
-                            box-shadow: 10px black;
-                        }
-                        
+                        .imgcont {
+                            position:relative;
+                            width:160px;
+                            height:230px;
+                                img {
+                                    width:150px;
+                                    height:220px;
+                                    padding: 0;
+                                    margin: 0;
+                                }
+                                .shelf-menu-btn {
+                                    width:40px;
+                                    height:40px;
+                                    border-radius:50%;
+                                    position:absolute;
+                                    right:0;
+                                    bottom:0;
+                                    z-index:1000;
+                                    color:white;
+                                    padding:0px;
+                                    border:0px;
+                                    background-image: url('../menuicon.png');
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-color: #57caff;
+                                    select {
+                                        cursor:pointer;
+                                        height:100%;
+                                        opacity:0;
+                                        width:100%;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

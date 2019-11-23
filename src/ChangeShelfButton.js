@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
-import serializeForm from 'form-serialize';
 
 class ChangeShelfButton extends Component {
     moveShelf = (e) => {
         e.preventDefault()
-        this.setState({ bookToMove: { book: this.props.book, shelf: e.value}})
-        const values = serializeForm(e.target, { hash: true })
-        values.book = this.props.book
-        this.props.onMove(values)
+        this.props.onMove(this.props.book, e.target.value)
     }
     render() {
         const { book, shelves } = this.props
         return (
-            <form onSubmit={this.moveShelf}> 
-                    <select name="shelf">
-                    {shelves.map((shelf,id) => (
-                        <option 
-                            key={id}
-                            className="dropdown"
-                            value={shelf.value}
-                            selected={book.shelf === shelf.value ? true : false}
-                        >{shelf.title}</option>
-                    ))}
-                    </select>
-                    <button>Move Shelf</button>
-            </form>
+                    <div className="shelf-menu-btn">
+                        <select
+                            onChange={this.moveShelf} 
+                            name="shelf"
+                        >
+                        <option value="none" disabled>
+                            Move to...
+                        </option>
+                        {shelves.map((shelf,id) => (
+                            <option 
+                                key={id}
+                                className="dropdown"
+                                value={shelf.value}
+                                selected={book.shelf === shelf.value ? true : false}
+                            >{shelf.title}</option>
+                        ))}
+                        </select>
+                    </div>
         )
     }
 }

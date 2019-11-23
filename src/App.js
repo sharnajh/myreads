@@ -19,13 +19,13 @@ class App extends Component {
       BooksAPI.getAll().then(books => this.setState({ books }));
     }
 
-    handleMove = (values) => {
-      BooksAPI.update(values.book, values.shelf).then(response => {
-        values.book.shelf = values.shelf;
+    handleMove = (book,shelf) => {
+      BooksAPI.update(book, shelf).then(response => {
+        book.shelf = shelf;
         this.setState(prevState => ({
           books: prevState.books
-            .filter(book => book.id !== values.book.id)
-            .concat(values.book)
+            .filter(b => b.id !== book.id)
+            .concat(book)
         }));
       });
     };
@@ -60,7 +60,6 @@ class App extends Component {
             onMove={this.handleMove}
             />
           )} />
-        <h5>Coded with ♡</h5>
       </div>
     )
   }
