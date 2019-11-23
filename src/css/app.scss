@@ -84,6 +84,9 @@ body {
             bottom:0;
             right:0;
             cursor:pointer;
+            &:focus {
+                outline: none !important;
+            }
         }
         #shelves {
             .shelf {

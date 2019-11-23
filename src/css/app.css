@@ -122,6 +122,10 @@ body #maincontainer #search-btn {
   cursor: pointer;
 }
 
+body #maincontainer #search-btn:focus {
+  outline: none !important;
+}
+
 body #maincontainer #shelves .shelf {
   margin: 20px;
 }
