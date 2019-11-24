@@ -25,7 +25,7 @@ class ChangeShelfButton extends Component {
                             name="shelf"
                             defaultValue={defaultShelf}
                         >
-                        <option value="none" disabled={book.shelf ? true : false}>
+                        <option value="none" disabled>
                             Move to...
                         </option>
                         {shelves.map((shelf,id) => (
