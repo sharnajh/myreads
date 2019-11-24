@@ -1,5 +1,7 @@
 # MyReads
 
+![Screenshot](./src/images/screenshot.png)
+
 MyReads is a bookshelf app that helps you keep track of your books by organizing them into your personal "bookshelves." 
 
 MyReads was bootstrapped with create-react-app.
