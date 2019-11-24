@@ -28,7 +28,7 @@ class SearchPage extends Component {
     searchResults = (q) => {
         BooksAPI.search(q).then((books) => {
             if ( q === this.state.query ) { 
-                if ( books.length > 0 ) {
+                if ( books && books.length > 0 ) {
                     this.setState({ results: this.props.shelvedBooks ? this.filterBooks(books) : books, catchError: false })
                 }  
                 else {
@@ -42,7 +42,7 @@ class SearchPage extends Component {
             query: e
         }))
         if (e) {
-        this.searchResults(e)
+        this.searchResults(e.trim())
         } else {
             this.setState({ results: [], searchErr: false })
         }
