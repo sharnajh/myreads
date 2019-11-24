@@ -66,7 +66,6 @@ class SearchPage extends Component {
                 
                 <div className="imgcont">
                         <Shelf
-                        
                             shelf="Search Results"
                             books={results}
                             shelves={shelves}

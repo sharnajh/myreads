@@ -7,7 +7,7 @@ class Shelf extends Component {
         const { books, shelf } = this.props
         return(
             <div className="shelf">
-                <ShelfTitle shelf={shelf} />
+                {shelf.title && <ShelfTitle shelf={shelf} />}
                 <div className="shelf-books">
                     
                         {books.map((b, id) => (

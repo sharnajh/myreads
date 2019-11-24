@@ -5,7 +5,7 @@ class ShelfTitle extends Component {
         const { shelf } = this.props
         return(
             <div>
-            <h2 className="shelf-title">{shelf.title ? shelf.title : shelf}</h2>
+            <h2 className="shelf-title">{shelf.title}</h2>
             <hr />
             </div>
         )
