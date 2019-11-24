@@ -26,5 +26,14 @@ The user can search for books and organize them into three different bookshelves
 
 MyReads was bootstrapped with create-react-app, styled with SASS, and routed with React Router DOM. 
 
+## Future Functionality
+
+* Switch API to Google Books API to fetch data from a larger database of books.
+* Remove books from shelves.
+* Create and delete shelves.
+* Bulk move books.
+* Reviews and a rating system.
+* Create log-in system. (Backend)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
