@@ -16,7 +16,7 @@ npm start
 
 MyReads fetches data from [Udacity's React Books API](https://reactnd-books-api.udacity.com/) to connect the user with an expansive library of books. 
 
-The user can search for books and organize them into three different bookshelves.
+The user can search for books and organize them into three different bookshelves:
  
 * Currently Reading
 * Want to Read
