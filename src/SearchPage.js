@@ -62,19 +62,17 @@ class SearchPage extends Component {
                 <div id="shelves">
                 <div className="shelf">
                 <div className="shelf-books">
-                {results.map((book, id) => (
                 
-                <div key={id} className="imgcont">
+                
+                <div className="imgcont">
                         <Shelf
-                            key={id}
+                        
                             shelf="Search Results"
                             books={results}
                             shelves={shelves}
                             onMove={this.props.onMove}
                         />
                 </div> 
-                
-                ))}
                 </div>
                 </div>
                 </div>
