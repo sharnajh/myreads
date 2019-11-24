@@ -15,7 +15,6 @@ class SearchPage extends Component {
             books.map((book) => { 
                 for (let b of this.props.shelvedBooks) {
                     if (book.id === b.id) {
-                        console.log(b.shelf)
                         book.shelf = b.shelf 
                         break //important
                     } else {
@@ -30,7 +29,7 @@ class SearchPage extends Component {
         BooksAPI.search(q.trim()).then((books) => {
             if ( q === this.state.query ) { 
                 if ( books.length > 0 ) {
-                    this.setState({ results: this.filterBooks(books), catchError: false })
+                    this.setState({ results: this.props.shelvedBooks ? this.filterBooks(books) : books, catchError: false })
                 }  
                 else {
                     this.setState({ results: [], catchError: true })
@@ -51,7 +50,6 @@ class SearchPage extends Component {
     render() {
         const { query, results, catchError } = this.state
         const { shelves } = this.props
-        console.log(results)
         return(
             <div id="search-pg">
             <input
