@@ -4,8 +4,6 @@
 
 MyReads is a bookshelf app that helps you keep track of your books by organizing them into your personal "bookshelves." 
 
-MyReads was bootstrapped with create-react-app.
-
 ## Installation
 
 Run the commands below and the app will run on [http://localhost:3000/](http://localhost:3000/)
