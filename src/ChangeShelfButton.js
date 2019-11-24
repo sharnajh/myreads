@@ -8,7 +8,7 @@ class ChangeShelfButton extends Component {
 
     render() {
         const { book, books, shelves } = this.props
-        let defaultShelf = 'none';
+        let defaultShelf = "none";
 
         if (books) {
             for (let b of books) {

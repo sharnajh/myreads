@@ -19,6 +19,7 @@ class Book extends Component {
                 
                 <h5>{book.title ? book.title : "No Title Available"}</h5>
                 <h6>{book.authors ? book.authors.join(', ') : "No Authors Available"}</h6>
+                
                     
                 
             </div>

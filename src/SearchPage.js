@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as BooksAPI from './BooksAPI.js';
-import Shelf from './Book';
+import Shelf from './Shelf';
 
 class SearchPage extends Component {
     state = {
@@ -9,11 +9,32 @@ class SearchPage extends Component {
         catchError: false
     }
 
+    // Filters the search results so that 
+    // the shelf is selected if applicable.
+    filterBooks = (books) => {
+            books.map((book) => { 
+                for (let b of this.props.shelvedBooks) {
+                    if (book.id === b.id) {
+                        console.log(b.shelf)
+                        book.shelf = b.shelf 
+                        break //important
+                    } else {
+                        book.shelf = "none"
+                    }
+                }
+            }) 
+            return books 
+    }
+
     searchResults = (q) => {
         BooksAPI.search(q.trim()).then((books) => {
             if ( q === this.state.query ) { 
-                books.length > 0 ? this.setState({ results: books, catchError: false }) : this.setState({ results: [], catchError: true })
-                
+                if ( books.length > 0 ) {
+                    this.setState({ results: this.filterBooks(books), catchError: false })
+                }  
+                else {
+                    this.setState({ results: [], catchError: true })
+                }
             }
         })
     }
@@ -30,6 +51,7 @@ class SearchPage extends Component {
     render() {
         const { query, results, catchError } = this.state
         const { shelves } = this.props
+        console.log(results)
         return(
             <div id="search-pg">
             <input
@@ -45,9 +67,9 @@ class SearchPage extends Component {
                 {results.map((book, id) => (
                 
                 <div key={id} className="imgcont">
-                        <Shelf 
+                        <Shelf
                             key={id}
-                            book={book}
+                            shelf="Search Results"
                             books={results}
                             shelves={shelves}
                             onMove={this.props.onMove}
