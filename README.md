@@ -24,7 +24,9 @@ The user can search for books and organize them into three different bookshelves
 
 ## Technologies
 
-MyReads was bootstrapped with create-react-app, styled with SASS, and routed with React Router DOM. 
+* Bootstrapped with create-react-app
+* Styled with SASS
+* Routed with React Router DOM. 
 
 ## Future Functionality
 
