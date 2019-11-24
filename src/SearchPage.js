@@ -50,7 +50,6 @@ class SearchPage extends Component {
     render() {
         const { query, results, catchError } = this.state
         const { shelves } = this.props
-        console.log(results)
         return(
             <div id="search-pg">
             <input
