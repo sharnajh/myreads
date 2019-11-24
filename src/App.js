@@ -60,8 +60,9 @@ class App extends Component {
           )} />
           <Route path='/search' render={() => (
             <SearchPage 
-            shelves={this.state.shelves}
-            onMove={this.handleMove}
+              shelves={this.state.shelves}
+              onMove={this.handleMove}
+              shelvedBooks={this.state.books}
             />
           )} />
       </div>

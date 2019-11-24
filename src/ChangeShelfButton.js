@@ -8,7 +8,7 @@ class ChangeShelfButton extends Component {
 
     render() {
         const { book, books, shelves } = this.props
-        let defaultShelf = 'none';
+        let defaultShelf = "none";
 
         if (books) {
             for (let b of books) {
@@ -25,7 +25,7 @@ class ChangeShelfButton extends Component {
                             name="shelf"
                             defaultValue={defaultShelf}
                         >
-                        <option value="none" disabled={book.shelf ? true : false}>
+                        <option value="none" disabled>
                             Move to...
                         </option>
                         {shelves.map((shelf,id) => (

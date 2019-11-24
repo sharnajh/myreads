@@ -14,11 +14,12 @@ class Book extends Component {
                             onMove={this.props.onMove}
                             shelves={this.props.shelves}
                         />
-                    <img src={book.imageLinks ? book.imageLinks.thumbnail : BlankCover} alt={book.title} />
+                    <img src={book.imageLinks && book.imageLinks.thumbnail ? book.imageLinks.thumbnail : BlankCover} alt={book.title} />
                 </div>
                 
                 <h5>{book.title ? book.title : "No Title Available"}</h5>
                 <h6>{book.authors ? book.authors.join(', ') : "No Authors Available"}</h6>
+                
                     
                 
             </div>
