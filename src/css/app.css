@@ -137,6 +137,10 @@ body #maincontainer #shelves .shelf hr {
   margin-bottom: 20px;
 }
 
+body #maincontainer #shelves .shelf h3 {
+  text-align: center;
+}
+
 body #maincontainer #shelves .shelf .shelf-title {
   text-align: center;
   font-size: 30px;
