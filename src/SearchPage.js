@@ -12,11 +12,11 @@ class SearchPage extends Component {
     // Filters the search results so that 
     // the shelf is selected if applicable.
     filterBooks = (books) => {
-            books.map((book) => { 
+            books.forEach((book) => { 
                 for (let b of this.props.shelvedBooks) {
                     if (book.id === b.id) {
                         book.shelf = b.shelf 
-                        break //important
+                        break 
                     } else {
                         book.shelf = "none"
                     }
