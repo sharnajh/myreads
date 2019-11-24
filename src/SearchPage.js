@@ -15,7 +15,6 @@ class SearchPage extends Component {
             books.map((book) => { 
                 for (let b of this.props.shelvedBooks) {
                     if (book.id === b.id) {
-                        console.log(b.shelf)
                         book.shelf = b.shelf 
                         break //important
                     } else {
