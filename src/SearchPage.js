@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as BooksAPI from './BooksAPI.js';
-import Book from './Book';
+import Shelf from './Book';
 
 class SearchPage extends Component {
     state = {
@@ -10,9 +10,11 @@ class SearchPage extends Component {
     }
 
     searchResults = (q) => {
-        BooksAPI.search(q).then((books) => {
-            books.length > 0 ? this.setState({ results: books, catchError: false }) 
-            : this.setState({ results: [], catchError: true })
+        BooksAPI.search(q.trim()).then((books) => {
+            if ( q === this.state.query ) { 
+                books.length > 0 ? this.setState({ results: books, catchError: false }) : this.setState({ results: [], catchError: true })
+                
+            }
         })
     }
     updateQuery = (e) => {
@@ -43,9 +45,10 @@ class SearchPage extends Component {
                 {results.map((book, id) => (
                 
                 <div key={id} className="imgcont">
-                        <Book 
+                        <Shelf 
                             key={id}
                             book={book}
+                            books={results}
                             shelves={shelves}
                             onMove={this.props.onMove}
                         />
