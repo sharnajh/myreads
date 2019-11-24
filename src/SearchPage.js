@@ -61,6 +61,7 @@ class SearchPage extends Component {
             />
                 <div id="shelves">
                 <div className="shelf">
+                { results && results.length > 0 && <h3>{results.length} Results</h3> }
                 <div className="shelf-books">
                 
                 
