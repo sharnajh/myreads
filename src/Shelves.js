@@ -1,8 +1,7 @@
 import React from 'react';
 import Shelf from './Shelf';
 
-function Shelves(props) {
-        return (
+const Shelves = (props) =>(
             <div id="shelves">
                 
             {props.shelves.map((shelf, id) => {
@@ -19,7 +18,7 @@ function Shelves(props) {
             })}
         
             </div>
-        )
-}
+    
+)
 
 export default Shelves

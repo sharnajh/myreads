@@ -2,8 +2,7 @@ import React from 'react';
 import ChangeShelfButton from './ChangeShelfButton';
 import BlankCover from './images/no_cover_available.png';
 
-function Book(props) {
-        return(
+const Book = (props) => (
             <div className="book">
                 <div className="imgcont">
                     <ChangeShelfButton
@@ -27,6 +26,5 @@ function Book(props) {
                 
             </div>
         )
-}
 
 export default Book

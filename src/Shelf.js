@@ -1,9 +1,7 @@
 import React from 'react';
 import Book from './Book'
 
-function Shelf(props) {
-
-        return(
+const Shelf = (props) => (
             <div className="shelf">
                 {props.shelf.title && (
                     <div>
@@ -25,6 +23,6 @@ function Shelf(props) {
                 </div>
             </div>
         )
-    }
+
 
 export default Shelf
