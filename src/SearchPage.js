@@ -44,7 +44,7 @@ class SearchPage extends Component {
         if (e) {
         this.searchResults(e)
         } else {
-            this.setState({ results: [], searchErr: false })
+            this.setState({ results: [], catchErr: false })
         }
     }
     render() {
