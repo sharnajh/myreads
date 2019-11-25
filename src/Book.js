@@ -17,7 +17,7 @@ const Book = props => (
             ? props.book.imageLinks.thumbnail
             : BlankCover
         }
-        alt={props.book.title}
+        alt={props.book.title ? props.book.title : "Untitled"}
       />
     </div>
 
