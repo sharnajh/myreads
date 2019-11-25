@@ -1,30 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ChangeShelfButton from './ChangeShelfButton';
 import BlankCover from './images/no_cover_available.png';
 
-class Book extends Component {
-    render() {
-        const { book, books } = this.props
+function Book(props) {
         return(
             <div className="book">
                 <div className="imgcont">
                     <ChangeShelfButton
-                            book={book}
-                            books={books}
-                            onMove={this.props.onMove}
-                            shelves={this.props.shelves}
+                            book={props.book}
+                            books={props.books}
+                            onMove={props.onMove}
+                            shelves={props.shelves}
                         />
-                    <img src={book.imageLinks && book.imageLinks.thumbnail ? book.imageLinks.thumbnail : BlankCover} alt={book.title} />
+                    <img src={
+                        props.book.imageLinks && 
+                        props.book.imageLinks.thumbnail ? 
+                        props.book.imageLinks.thumbnail : 
+                        BlankCover} 
+                        alt={props.book.title} />
                 </div>
                 
-                <h5>{book.title ? book.title : "No Title Available"}</h5>
-                <h6>{book.authors ? book.authors.join(', ') : "No Authors Available"}</h6>
+                <h5>{props.book.title ? props.book.title : "No Title Available"}</h5>
+                <h6>{props.book.authors ? props.book.authors.join(', ') : "No Authors Available"}</h6>
                 
                     
                 
             </div>
         )
-    }
 }
 
 export default Book
