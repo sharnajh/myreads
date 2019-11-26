@@ -41,7 +41,7 @@ class SearchPage extends Component {
         if (books && books.length > 0) {
           this.setState({
             results:
-              this.props.shelvedBooks.length < 0
+              this.props.shelvedBooks.length > 0
                 ? this.filterBooks(books)
                 : this.noShelvedBooks(books),
             queryError: false
