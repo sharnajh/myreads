@@ -6,6 +6,7 @@ const Book = props => (
   <div className="book">
     <div className="imgcont">
       <ChangeShelfButton
+        key={props.book.id} //important
         book={props.book}
         books={props.books}
         onMove={props.onMove}
