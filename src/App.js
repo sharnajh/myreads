@@ -38,13 +38,12 @@ class App extends Component {
     if (this.state.error) {
       return <p>Please try again later.</p>;
     }
-    console.log(this.state.books);
     return (
       <div id="maincontainer">
         <div id="header">
           <Switch>
             <Route
-              path="/search"
+              path={'/search'}
               render={() => (
                 <Link to="/">
                   <img id="back" src={Back} alt="back" />
@@ -69,16 +68,16 @@ class App extends Component {
                   onMove={this.handleMove}
                   shelves={this.state.shelves}
                 />
-                <form action="/search">
+                <Link to={'/search'}>
                   <button id="search-btn" type="submit">
                     +
                   </button>
-                </form>
+                </Link>
               </div>
             )}
           />
           <Route
-            path="/search"
+            path={'/search'}
             render={() => (
               <SearchPage
                 shelves={this.state.shelves}
