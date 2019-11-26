@@ -6,7 +6,6 @@ const Shelf = props => (
     {props.shelf.title && (
       <div>
         <h2 className="shelf-title">{props.shelf.title}</h2>
-        <hr />
       </div>
     )}
     <div className="shelf-books">
