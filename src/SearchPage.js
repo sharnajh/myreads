@@ -61,7 +61,7 @@ class SearchPage extends Component {
           placeholder="Search for books"
           onChange={e => this.updateQuery(e.target.value)}
         />
-        <div id="shelves">
+        <div className="shelves">
           <div className="shelf">
             {results && results.length > 0 && <h3>{results.length} Results</h3>}
             <div className="shelf-books">
