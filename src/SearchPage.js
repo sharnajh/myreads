@@ -6,7 +6,8 @@ class SearchPage extends Component {
   state = {
     query: "",
     results: [],
-    catchError: false
+    queryError: false,
+    apiError: false
   };
 
   // Filters the search results so that
@@ -25,19 +26,32 @@ class SearchPage extends Component {
     return books;
   };
 
+  // If there are no shelved books in props.
+  noShelvedBooks = books => {
+    books.forEach(book => {
+      book.shelf = "none";
+    });
+    return books;
+  };
+
   searchResults = q => {
-    BooksAPI.search(q.trim()).then(books => {
+    BooksAPI.search(q.trim())
+    .then(books => {
       if (q === this.state.query) {
         if (books && books.length > 0) {
           this.setState({
-            results: this.props.shelvedBooks ? this.filterBooks(books) : books,
-            catchError: false
+            results:
+              this.props.shelvedBooks.length < 0
+                ? this.filterBooks(books)
+                : this.noShelvedBooks(books),
+            queryError: false
           });
         } else {
-          this.setState({ results: [], catchError: true });
+          this.setState({ results: [], queryError: true });
         }
       }
-    });
+    })
+    .catch(() => this.setState({ apiError: true }));
   };
   updateQuery = e => {
     this.setState(() => ({
@@ -46,11 +60,11 @@ class SearchPage extends Component {
     if (e) {
       this.searchResults(e);
     } else {
-      this.setState({ results: [], catchErr: false });
+      this.setState({ results: [], queryError: false });
     }
   };
   render() {
-    const { query, results, catchError } = this.state;
+    const { query, results, queryError, apiError } = this.state;
     const { shelves } = this.props;
     return (
       <div id="search-pg">
@@ -77,8 +91,11 @@ class SearchPage extends Component {
           </div>
         </div>
 
-        {catchError && (
+        {queryError && (
           <h3>Your search - "{query}" - did not match with any books.</h3>
+        )}
+        {apiError && (
+          <h3>Please try again later</h3>
         )}
       </div>
     );

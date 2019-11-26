@@ -26,7 +26,8 @@ The user can search for books and organize them into three different bookshelves
 
 * Bootstrapped with create-react-app
 * Styled with SASS
-* Routed with React Router DOM. 
+* Routed with React Router DOM in Development
+* Used HashRouter for Production Routing
 
 ## Future Functionality
 
