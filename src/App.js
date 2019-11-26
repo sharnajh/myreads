@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Shelves from "./Shelves";
 import * as BooksAPI from "./BooksAPI";
-import { Route, Link, Switch, HashRouter } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 import SearchPage from "./SearchPage";
 import "./css/app.css";
 import Back from "./icons/left.svg";
