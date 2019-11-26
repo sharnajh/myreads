@@ -13,13 +13,14 @@ class ChangeShelfButton extends Component {
     const { book, books, shelves } = this.props;
     let defaultShelf = "none";
 
-    for (let b of books) {
-      if (b.id === book.id) {
-        defaultShelf = b.shelf;
-        break;
+    if (books) {
+      for (let b of books) {
+        if (b.id === book.id) {
+          defaultShelf = b.shelf;
+          break;
+        }
       }
     }
-
     return (
       <div className="shelf-menu-btn">
         <select onChange={this.moveShelf} defaultValue={defaultShelf}>
