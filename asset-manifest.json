@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/MyReads/static/css/main.c3d45ebf.chunk.css",
-    "main.js": "/MyReads/static/js/main.e541d180.chunk.js",
-    "main.js.map": "/MyReads/static/js/main.e541d180.chunk.js.map",
-    "runtime-main.js": "/MyReads/static/js/runtime-main.498e9297.js",
-    "runtime-main.js.map": "/MyReads/static/js/runtime-main.498e9297.js.map",
-    "static/js/2.7dae55d2.chunk.js": "/MyReads/static/js/2.7dae55d2.chunk.js",
-    "static/js/2.7dae55d2.chunk.js.map": "/MyReads/static/js/2.7dae55d2.chunk.js.map",
-    "index.html": "/MyReads/index.html",
-    "precache-manifest.23356cb3dd17e037482d04b6db6635b7.js": "/MyReads/precache-manifest.23356cb3dd17e037482d04b6db6635b7.js",
-    "service-worker.js": "/MyReads/service-worker.js",
-    "static/css/main.c3d45ebf.chunk.css.map": "/MyReads/static/css/main.c3d45ebf.chunk.css.map",
-    "static/media/app.css": "/MyReads/static/media/drop-down-arrow.88a27840.svg",
-    "static/media/left.svg": "/MyReads/static/media/left.6c7df99d.svg",
-    "static/media/no_cover_available.png": "/MyReads/static/media/no_cover_available.dee850f9.png"
+    "main.css": "/myreads/static/css/main.b19dc129.chunk.css",
+    "main.js": "/myreads/static/js/main.e0236717.chunk.js",
+    "main.js.map": "/myreads/static/js/main.e0236717.chunk.js.map",
+    "runtime-main.js": "/myreads/static/js/runtime-main.1a9c4fd2.js",
+    "runtime-main.js.map": "/myreads/static/js/runtime-main.1a9c4fd2.js.map",
+    "static/js/2.7dae55d2.chunk.js": "/myreads/static/js/2.7dae55d2.chunk.js",
+    "static/js/2.7dae55d2.chunk.js.map": "/myreads/static/js/2.7dae55d2.chunk.js.map",
+    "index.html": "/myreads/index.html",
+    "precache-manifest.183a67e54c5bc9c7d6a6ff7e3e8f7d0e.js": "/myreads/precache-manifest.183a67e54c5bc9c7d6a6ff7e3e8f7d0e.js",
+    "service-worker.js": "/myreads/service-worker.js",
+    "static/css/main.b19dc129.chunk.css.map": "/myreads/static/css/main.b19dc129.chunk.css.map",
+    "static/media/app.css": "/myreads/static/media/drop-down-arrow.88a27840.svg",
+    "static/media/left.svg": "/myreads/static/media/left.6c7df99d.svg",
+    "static/media/no_cover_available.png": "/myreads/static/media/no_cover_available.dee850f9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.498e9297.js",
+    "static/js/runtime-main.1a9c4fd2.js",
     "static/js/2.7dae55d2.chunk.js",
-    "static/css/main.c3d45ebf.chunk.css",
-    "static/js/main.e541d180.chunk.js"
+    "static/css/main.b19dc129.chunk.css",
+    "static/js/main.e0236717.chunk.js"
   ]
 }
