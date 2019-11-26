@@ -25,12 +25,23 @@ class SearchPage extends Component {
     return books;
   };
 
+  // If there are no shelved books in props.
+  noShelvedBooks = books => {
+    books.forEach(book => {
+      book.shelf = "none";
+    });
+    return books;
+  };
+
   searchResults = q => {
     BooksAPI.search(q.trim()).then(books => {
       if (q === this.state.query) {
         if (books && books.length > 0) {
           this.setState({
-            results: this.props.shelvedBooks ? this.filterBooks(books) : books,
+            results:
+              this.props.shelvedBooks.length < 0
+                ? this.filterBooks(books)
+                : this.noShelvedBooks(books),
             catchError: false
           });
         } else {
