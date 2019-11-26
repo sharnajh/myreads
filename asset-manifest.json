@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/myreads/static/css/main.b19dc129.chunk.css",
-    "main.js": "/myreads/static/js/main.1f0c601a.chunk.js",
-    "main.js.map": "/myreads/static/js/main.1f0c601a.chunk.js.map",
+    "main.js": "/myreads/static/js/main.bb410729.chunk.js",
+    "main.js.map": "/myreads/static/js/main.bb410729.chunk.js.map",
     "runtime-main.js": "/myreads/static/js/runtime-main.1a9c4fd2.js",
     "runtime-main.js.map": "/myreads/static/js/runtime-main.1a9c4fd2.js.map",
     "static/js/2.7dae55d2.chunk.js": "/myreads/static/js/2.7dae55d2.chunk.js",
     "static/js/2.7dae55d2.chunk.js.map": "/myreads/static/js/2.7dae55d2.chunk.js.map",
     "index.html": "/myreads/index.html",
-    "precache-manifest.dc789b29978f98617660c697211ae761.js": "/myreads/precache-manifest.dc789b29978f98617660c697211ae761.js",
+    "precache-manifest.682b2855bf899e4153e0faf52a653081.js": "/myreads/precache-manifest.682b2855bf899e4153e0faf52a653081.js",
     "service-worker.js": "/myreads/service-worker.js",
     "static/css/main.b19dc129.chunk.css.map": "/myreads/static/css/main.b19dc129.chunk.css.map",
     "static/media/app.css": "/myreads/static/media/drop-down-arrow.88a27840.svg",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.1a9c4fd2.js",
     "static/js/2.7dae55d2.chunk.js",
     "static/css/main.b19dc129.chunk.css",
-    "static/js/main.1f0c601a.chunk.js"
+    "static/js/main.bb410729.chunk.js"
   ]
 }
