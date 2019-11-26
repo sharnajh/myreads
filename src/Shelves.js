@@ -2,7 +2,7 @@ import React from "react";
 import Shelf from "./Shelf";
 
 const Shelves = props => (
-  <div id="shelves">
+  <div class="shelves">
     {props.shelves.map((shelf, id) => {
       const booksByShelf = props.books.filter(b => b.shelf === shelf.value);
       return (

@@ -36,13 +36,12 @@ body #maincontainer #search-pg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
   margin: 0;
   padding: 0;
 }
 
 body #maincontainer #search-pg #search-bar {
-  width: 80%;
+  width: 80vw;
   position: relative;
   top: 80px;
   height: 50px;
@@ -130,35 +129,45 @@ body #maincontainer #search-btn:focus {
   outline: none !important;
 }
 
-body #maincontainer #shelves {
+body #maincontainer .shelves {
   margin-top: 90px;
 }
 
-body #maincontainer #shelves .shelf {
+body #maincontainer .shelves .shelf {
   margin: 20px;
 }
 
-body #maincontainer #shelves .shelf hr {
-  max-width: 20%;
-  border: 0.5px lightgray solid;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-body #maincontainer #shelves .shelf h3 {
+body #maincontainer .shelves .shelf h3 {
   text-align: center;
 }
 
-body #maincontainer #shelves .shelf .shelf-title {
+body #maincontainer .shelves .shelf .shelf-title {
   text-align: center;
   font-size: 30px;
   position: relative;
   color: #5c5c5c;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body #maincontainer #shelves .shelf .shelf-books {
+body #maincontainer .shelves .shelf .shelf-title:after {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 1rem;
+  height: 1px;
+  width: 90%;
+  background-color: lightgray;
+}
+
+body #maincontainer .shelves .shelf .shelf-books {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,27 +186,27 @@ body #maincontainer #shelves .shelf .shelf-books {
   margin: 10px;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book {
+body #maincontainer .shelves .shelf .shelf-books .book {
   width: 150px;
   height: 300px;
   margin: 10px;
   padding: 10px;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book h5, body #maincontainer #shelves .shelf .shelf-books .book h6 {
+body #maincontainer .shelves .shelf .shelf-books .book h5, body #maincontainer .shelves .shelf .shelf-books .book h6 {
   padding: 0px;
   margin: 0px;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book h6 {
+body #maincontainer .shelves .shelf .shelf-books .book h6 {
   color: #8b8b8b;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book h5 {
+body #maincontainer .shelves .shelf .shelf-books .book h5 {
   color: #5c5c5c;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book .imgcont {
+body #maincontainer .shelves .shelf .shelf-books .book .imgcont {
   position: relative;
   width: 160px;
   height: 230px;
@@ -205,7 +214,7 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont {
   margin: 0;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book .imgcont img {
+body #maincontainer .shelves .shelf .shelf-books .book .imgcont img {
   width: 150px;
   height: 220px;
   padding: 0;
@@ -214,7 +223,7 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont img {
           box-shadow: 0 10px 6px -6px #9c9c9c;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn {
+body #maincontainer .shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -232,7 +241,7 @@ body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn 
   background-color: #57caff;
 }
 
-body #maincontainer #shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn select {
+body #maincontainer .shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn select {
   cursor: pointer;
   height: 100%;
   width: 100%;
