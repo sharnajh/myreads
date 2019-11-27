@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/myreads/static/css/main.b19dc129.chunk.css",
+    "main.css": "/myreads/static/css/main.e520cfab.chunk.css",
     "main.js": "/myreads/static/js/main.36f7fd5e.chunk.js",
     "main.js.map": "/myreads/static/js/main.36f7fd5e.chunk.js.map",
     "runtime-main.js": "/myreads/static/js/runtime-main.1a9c4fd2.js",
@@ -8,9 +8,9 @@
     "static/js/2.65e8f466.chunk.js": "/myreads/static/js/2.65e8f466.chunk.js",
     "static/js/2.65e8f466.chunk.js.map": "/myreads/static/js/2.65e8f466.chunk.js.map",
     "index.html": "/myreads/index.html",
-    "precache-manifest.98fe20eebf2c8d1cf4048445a406b025.js": "/myreads/precache-manifest.98fe20eebf2c8d1cf4048445a406b025.js",
+    "precache-manifest.e9c87cd269296e280082b69d69371d04.js": "/myreads/precache-manifest.e9c87cd269296e280082b69d69371d04.js",
     "service-worker.js": "/myreads/service-worker.js",
-    "static/css/main.b19dc129.chunk.css.map": "/myreads/static/css/main.b19dc129.chunk.css.map",
+    "static/css/main.e520cfab.chunk.css.map": "/myreads/static/css/main.e520cfab.chunk.css.map",
     "static/media/app.css": "/myreads/static/media/drop-down-arrow.88a27840.svg",
     "static/media/left.svg": "/myreads/static/media/left.6c7df99d.svg",
     "static/media/no_cover_available.png": "/myreads/static/media/no_cover_available.dee850f9.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.1a9c4fd2.js",
     "static/js/2.65e8f466.chunk.js",
-    "static/css/main.b19dc129.chunk.css",
+    "static/css/main.e520cfab.chunk.css",
     "static/js/main.36f7fd5e.chunk.js"
   ]
 }
