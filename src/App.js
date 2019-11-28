@@ -43,7 +43,7 @@ class App extends Component {
         <div id="header">
           <Switch>
             <Route
-              path={'/search'}
+              path={"/search"}
               render={() => (
                 <Link to="/">
                   <img id="back" src={Back} alt="back" />
@@ -68,7 +68,7 @@ class App extends Component {
                   onMove={this.handleMove}
                   shelves={this.state.shelves}
                 />
-                <Link to={'/search'}>
+                <Link to={"/search"}>
                   <button id="search-btn" type="submit">
                     +
                   </button>
@@ -77,7 +77,7 @@ class App extends Component {
             )}
           />
           <Route
-            path={'/search'}
+            path={"/search"}
             render={() => (
               <SearchPage
                 shelves={this.state.shelves}

@@ -4,6 +4,7 @@ class ChangeShelfButton extends Component {
   state = {
     moved: false
   };
+  
   moveShelf = e => {
     this.props.onMove(this.props.book, e.target.value);
     this.setState({ moved: !this.state.moved });

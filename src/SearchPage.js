@@ -36,22 +36,22 @@ class SearchPage extends Component {
 
   searchResults = q => {
     BooksAPI.search(q.trim())
-    .then(books => {
-      if (q === this.state.query) {
-        if (books && books.length > 0) {
-          this.setState({
-            results:
-              this.props.shelvedBooks.length > 0
-                ? this.filterBooks(books)
-                : this.noShelvedBooks(books),
-            queryError: false
-          });
-        } else {
-          this.setState({ results: [], queryError: true });
+      .then(books => {
+        if (q === this.state.query) {
+          if (books && books.length > 0) {
+            this.setState({
+              results:
+                this.props.shelvedBooks.length > 0
+                  ? this.filterBooks(books)
+                  : this.noShelvedBooks(books),
+              queryError: false
+            });
+          } else {
+            this.setState({ results: [], queryError: true });
+          }
         }
-      }
-    })
-    .catch(() => this.setState({ apiError: true }));
+      })
+      .catch(() => this.setState({ apiError: true }));
   };
   updateQuery = e => {
     this.setState(() => ({
@@ -91,12 +91,11 @@ class SearchPage extends Component {
           </div>
         </div>
 
+        {/* Error Handling */}
         {queryError && (
           <h3>Your search - "{query}" - did not match with any books.</h3>
         )}
-        {apiError && (
-          <h3>Please try again later</h3>
-        )}
+        {apiError && <h3>Please try again later</h3>}
       </div>
     );
   }
