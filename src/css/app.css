@@ -135,6 +135,16 @@ body #maincontainer .shelves {
 
 body #maincontainer .shelves .shelf {
   margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body #maincontainer .shelves .shelf h3 {
@@ -177,9 +187,9 @@ body #maincontainer .shelves .shelf .shelf-books {
           flex-flow: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -236,8 +246,10 @@ body #maincontainer .shelves .shelf .shelf-books .book .imgcont .shelf-menu-btn 
   border: 0px;
   background-image: url("../icons/drop-down-arrow.svg");
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 20px, cover;
   background-position: center;
+  background-image: url("../icons/drop-down-arrow.svg"), -webkit-gradient(linear, left top, right top, from(#b149ff), to(#00ffff));
+  background-image: url("../icons/drop-down-arrow.svg"), linear-gradient(to right, #b149ff 0%, #00ffff 100%);
   background-color: #57caff;
 }
 
