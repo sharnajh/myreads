@@ -41,4 +41,4 @@ The user can search for books and organize them into three different bookshelves
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Licensed under [MIT](https://choosealicense.com/licenses/mit/)
